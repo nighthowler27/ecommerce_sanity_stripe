@@ -65,10 +65,51 @@ width: 100%;
     margin-left: 6px;
 }
 .logo{
+  width: 200px;
   color: gray;
   font-size: 18px;
+  justify-content: center;
+  align-items: center;
 
 }
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 15px;
+    list-style: none;
+}
+
+.navbar-right {
+    display: flex;
+    margin-right: 15px;
+}
+
+.login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.login .username{
+    margin-right: 25px;
+}
+
+#login {
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#login:hover {
+    background: #5f5f5f;
+    color: #2df088;
+}
+
 .cart-icon{
   font-size: 25px;
   color: gray;

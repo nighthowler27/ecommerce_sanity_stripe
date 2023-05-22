@@ -7,6 +7,8 @@ import Home from '../pages/index';
 import { Cart } from './';
 import { useStateContext} from '../context/StateContext';
 
+import { useState } from 'react';
+
 import Logo from '../public/img/Logos/devengers_vault_logo3.png';
 
 const Navbar = () => {
@@ -23,8 +25,9 @@ const Navbar = () => {
         <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="Shop">Shop</Link></li>
-            <li><Link href="Auction">Auction</Link></li>
-            <li><Link href="Request">Request</Link></li>
+            <li><Link href="Auction">Bid</Link></li>
+            <li><Link href="Auction">Category</Link></li>
+            <li><Link href="Request">FaQ</Link></li>
         </ul>
       </nav>
 
@@ -34,7 +37,7 @@ const Navbar = () => {
 
             </div>
 
-            <button type="submit" name="login" id="login">Login</button>
+            <button type="submit" name="login" id="login"><a href="./login-componets/login-signup.html">Login</a></button>
         </div>
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
             <AiOutlineShopping />
@@ -44,6 +47,15 @@ const Navbar = () => {
       {showCart && <Cart />}
     </div>
   )
+  function WelcomeMessage() {
+    const [userLogin, setUserLogin] = useState(null);
+  
+    return (
+      <div className="username">
+        {userLogin ? `Welcome <b>${userLogin}</b>` : 'Welcome Guest!'}
+      </div>
+    );
+  }
 }
 
 export default Navbar

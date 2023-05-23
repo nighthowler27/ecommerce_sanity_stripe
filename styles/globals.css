@@ -286,10 +286,11 @@ text-align: end;
   margin:18px;
 }
 .footer-banner-image{
+  width: 50%;
   position: absolute;
   /* top: -35%;
   left: 8%; */
-  top: -25%;
+  top: -55%;
   left: 25%;
 }
 .banner-desc .right{

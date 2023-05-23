@@ -37,7 +37,7 @@ const Navbar = () => {
 
             </div>
 
-            <button type="submit" name="login" id="login"><a href="./login-componets/login-signup.html">Login</a></button>
+            <button type="submit" name="login" id="login"><Link href="/login-components/login_signup">Login</Link></button>
         </div>
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
             <AiOutlineShopping />

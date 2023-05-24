@@ -11,6 +11,8 @@ import { useState } from 'react';
 
 import Logo from '../public/img/Logos/devengers_vault_logo3.png';
 
+import { AiOutlineSearch } from 'react-icons/ai';
+
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
   console.log();
@@ -24,12 +26,17 @@ const Navbar = () => {
       <nav>
         <ul>
             <li><Link href="/">Home</Link></li>
-            {/* <li><Link href="">Shop</Link></li>
+            <li><Link href="">Shop</Link></li>
             <li><Link href="">Bid</Link></li>
             <li><Link href="">Category</Link></li>
-            <li><Link href="">FaQ</Link></li> */}
+            <li><Link href="">FaQ</Link></li>
         </ul>
       </nav>
+
+      <div className="search-tool">
+        <input type="text" name="searchbar" />
+        <button type="submit" name search><AiOutlineSearch /></button>
+      </div>
 
       <div className="navbar-right">
         <div className="login">

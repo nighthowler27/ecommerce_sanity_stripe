@@ -24,10 +24,10 @@ const Navbar = () => {
       <nav>
         <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="Shop">Shop</Link></li>
-            <li><Link href="Auction">Bid</Link></li>
-            <li><Link href="Auction">Category</Link></li>
-            <li><Link href="Request">FaQ</Link></li>
+            {/* <li><Link href="">Shop</Link></li>
+            <li><Link href="">Bid</Link></li>
+            <li><Link href="">Category</Link></li>
+            <li><Link href="">FaQ</Link></li> */}
         </ul>
       </nav>
 

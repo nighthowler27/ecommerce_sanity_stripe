@@ -70,8 +70,11 @@ width: 100%;
   font-size: 18px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
 }
+
+/* NAVBAR */
 
 nav ul {
     display: flex;
@@ -86,6 +89,74 @@ nav ul li {
     display: flex;
     margin-right: 15px;
 }
+
+/* END OF NAV BAR */
+/* ================= */
+/* ================= */
+/* SEARCH BAR */
+
+.search-tool {
+    position: relative;
+    margin-top: 5px;
+    height: 40px;
+    padding: 10px;
+    background: #5f5f5f;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.search-tool input {
+    justify-content: center;
+    align-self: center;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 8px;
+}
+
+.search-tool input::placeholder {
+    color: rgb(255, 255, 255);
+  }
+
+.search-tool input:focus, input:active {
+    outline: none;
+    border-color: transparent;
+  }
+
+.search-tool button {
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-self: center;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    margin-left: 5px;
+    right: -10px;
+    position: relative;
+    cursor: pointer;
+}
+.search-tool button:hover {
+    background: #dcdcdc7b;
+}
+
+.search-tool button .search-icon {
+    font-size: 30px;
+    justify-content: center;
+    align-self: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* END OF SEARCH BAR */
+/* ================= */
+/* ================= */
+/* login button*/
 
 .login {
     display: flex;
@@ -110,6 +181,9 @@ nav ul li {
     color: #2df088;
 }
 
+/* end of login */
+/* ================= */
+/* cart icon */
 .cart-icon{
   font-size: 25px;
   color: gray;
@@ -133,16 +207,58 @@ nav ul li {
   border-radius: 50%;
   text-align: center;
   font-weight: 600;
-
 }
+
+/* end of cart icon */
+/* ================= */
+/* product container */
+
 .products-container{
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
   width: 100%;
 }
+.products-container .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.products-container .pagination {
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pages {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.homepg-pagination {
+    display: flex;
+    list-style: none;
+}
+.homepg-pagination .pg_numbers{
+    width: 70px;
+    display: flex;
+    margin: 0px 10px;
+    padding: 0;
+    gap: 8px;
+}
+
+.pages button {
+    width: 50px;
+}
+
+/* END OF PRODUCT */
+
 .product-card{
  cursor: pointer;
   transform: scale(1, 1);
@@ -345,6 +461,7 @@ text-align: end;
   font-size: 30px;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
  .cart-heading{
   display: flex;

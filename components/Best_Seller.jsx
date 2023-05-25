@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 import { urlFor } from '../lib/client';
 
-const Product = ({ product: { image, name, slug, price } }) => {
-//   console.log(Product);
+const Best_Seller = ({ product: { image, name, slug, price } }) => {
+//   console.log(Best_Seller);
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
@@ -23,4 +23,4 @@ const Product = ({ product: { image, name, slug, price } }) => {
   )
 }
 
-export default Product
+export default Best_Seller

@@ -1,8 +1,8 @@
 import React from 'react';
-import styling from '/login-signup.css';
-import Actions from '/login-signup.js';
+// import styling from './login-signup.css';
+// import Actions from './login-signup.js';
 
-const login_signup = () => {
+const Login_Register = () => {
   return (
     
       <div style={{styling}}>W
@@ -60,7 +60,7 @@ const login_signup = () => {
 </div>
 </div>
 
-<!-- Forgot Password Modal -->
+{/* Forgot Password Modal */}
 <div class="modal">
 <div class="modal-content">
   <span class="close-modal-btn">&times;</span>
@@ -81,4 +81,4 @@ const login_signup = () => {
   )
 }
 
-export default login_signup
+export default Login_Register;

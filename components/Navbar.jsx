@@ -20,7 +20,9 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="logo">
-        <Image src={Logo} alt="Logo" className="navbar-logo" href="/" />
+        <Link href="/" >
+            <Image src={Logo} alt="Logo" className="navbar-logo" />
+        </Link>
       </div>
 
       <nav>
@@ -34,17 +36,18 @@ const Navbar = () => {
       </nav>
 
       <div className="search-tool">
-        <input type="text" name="searchbar" />
-        <button type="submit" name search><AiOutlineSearch /></button>
+        <input type="text" name="searchbar" placeholder="Search here..."/>
+        <button type="submit" name="search" ><p className="search-icon"><AiOutlineSearch /></p></button>
       </div>
 
       <div className="navbar-right">
         <div className="login">
             <div className="username">
-
+                <p>Welcome, <b>Guest </b>! </p>
             </div>
-
-            <button type="submit" name="login" id="login"><Link href="/login-components/login_signup">Login</Link></button>
+            <Link href="./login">
+                <button type="submit" name="login" id="login">Login </button>
+            </Link>
         </div>
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
             <AiOutlineShopping />

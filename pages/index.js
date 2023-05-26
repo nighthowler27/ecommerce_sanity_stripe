@@ -17,7 +17,7 @@ const Home = ({ products, bestSellers, bannerData }) => {
     event.preventDefault();
   };
 
-  const pageLinks = Array(Math.ceil(products.length / 10))
+  const pageLinks = Array(Math.ceil(products.length / 5))
   .fill(null)
   .map((_, index) => (
     <button key={index} className="pg_number">
@@ -47,7 +47,7 @@ const Home = ({ products, bestSellers, bannerData }) => {
         </div>
 
         <div className="products-container">
-            {products?.slice((currentPageProducts - 1) * 10, currentPageProducts * 10)
+            {products?.slice((currentPageProducts - 1) * 5, currentPageProducts * 5)
                 .map((product) => (
                 <Product key={product._id} product={product} />
             ))}
@@ -68,7 +68,7 @@ const Home = ({ products, bestSellers, bannerData }) => {
                 </li>
                 <li className="pg_numbers">{pageLinks}</li>
                 <li className="page-next">
-                {currentPageProducts === Math.ceil(products.length / 10) ? (
+                {currentPageProducts === Math.ceil(products.length / 5) ? (
                     <a href="" className="page-link disabled" disabled>
                     Next
                     </a>
@@ -92,7 +92,7 @@ const Home = ({ products, bestSellers, bannerData }) => {
                 <Best_Seller key={product._id} product={product} />
             ))}
         </div>
-    
+    {/* ========================new list ============================================== */}
         <div className="pages">
             <ul className="homepg-pagination">
                 <li className="page-prev">

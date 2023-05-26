@@ -20,6 +20,7 @@ const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTi
           <Link href={`/product/${product}`}>
             <button type="button">{buttonText}</button>
           </Link>
+          {/* {console.log(`/product/${product}`)} */}
         </div>
 
         <img 

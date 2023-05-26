@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .devengers{
+    text-align: center;
+  }
+
+  h1 {
+    color: #FF6600;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #888888;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #DDDDDD;
+    margin-bottom: 20px;
+  }
+
+  .policy-section {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .policy-section h2 {
+    color: #3366CC;
+    font-size: 24px;
+    margin-bottom: 10px;
+
+  }
+
+  .policy-section p {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .policy-section a {
+    color: #3366CC;
+  }
+
+  .policy-section ul, .policy-section ol {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  .policy-section li {
+    margin-bottom: 5px;
+  }
+
+  .policy-section:last-child {
+    margin-bottom: 0;
+  }

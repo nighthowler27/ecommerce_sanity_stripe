@@ -11,6 +11,8 @@ import { useState } from 'react';
 
 import Logo from '../public/img/Logos/devengers_vault_logo3.png';
 
+import { AiOutlineSearch } from 'react-icons/ai';
+
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
   console.log();
@@ -18,26 +20,34 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="logo">
-        <Image src={Logo} alt="Logo" className="navbar-logo" href="/" />
+        <Link href="/" >
+            <Image src={Logo} alt="Logo" className="navbar-logo" />
+        </Link>
       </div>
 
       <nav>
         <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="Shop">Shop</Link></li>
-            <li><Link href="Auction">Bid</Link></li>
-            <li><Link href="Auction">Category</Link></li>
-            <li><Link href="Request">FaQ</Link></li>
+            <li><Link href="">Shop</Link></li>
+            <li><Link href="">Bid</Link></li>
+            <li><Link href="">Category</Link></li>
+            <li><Link href="">FaQ</Link></li>
         </ul>
       </nav>
+
+      <div className="search-tool">
+        <input type="text" name="searchbar" placeholder="Search here..."/>
+        <button type="submit" name="search" ><p className="search-icon"><AiOutlineSearch /></p></button>
+      </div>
 
       <div className="navbar-right">
         <div className="login">
             <div className="username">
-
+                <p>Welcome, <b>Guest </b>! </p>
             </div>
-
-            <button type="submit" name="login" id="login"><Link href="/login-components/login_signup">Login</Link></button>
+            <Link href="./login">
+                <button type="submit" name="login" id="login">Login </button>
+            </Link>
         </div>
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
             <AiOutlineShopping />

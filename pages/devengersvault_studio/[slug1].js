@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 import { client, urlFor } from '../../lib/client';
-import { Product } from '../../components';
+import { Best_Seller } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 
-const ProductDetails = ({ product, products}) => {
-  const { image, name, details, price, description} = product;
+const BestSellerDetails = ({ bestSeller, bestSellers }) => {
+  const { image, name, details, price, description} = bestSeller;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
   const handleBuyNow = () => {
-    onAdd(product, qty);
+    onAdd(bestSeller, qty);
 
     setShowCart(true);
   }
@@ -61,7 +61,7 @@ const ProductDetails = ({ product, products}) => {
             </p>
           </div>
           <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
+            <button type="button" className="add-to-cart" onClick={() => onAdd(bestSeller, qty)}>Add to Cart</button>
             <button type="button" className="buy-now" onClick={handleBuyNow}>Buy Now</button>
           </div>
 
@@ -77,8 +77,8 @@ const ProductDetails = ({ product, products}) => {
           <h2>You may also like</h2>
           <div className="marquee">
             <div className="maylike-products-container track">
-              {products.map((item) => (
-                <Product key={item._id} product={item} />
+              {bestSellers.map((item) => (
+                <Best_Seller key={item._id} product={item} />
               ))}
             </div>
           </div>
@@ -88,18 +88,18 @@ const ProductDetails = ({ product, products}) => {
 }
 
 export const getStaticPaths = async () => {
-  const query = `*[_type == "product"] {
+  const query = `*[_type == "bestSeller"] {
     slug {
       current
     }
   }
   `;
 
-  const products = await client.fetch(query);
+  const bestSellers = await client.fetch(query);
 
-  const paths = products.map((product) => ({
+  const paths = bestSellers.map((bestSeller) => ({
     params: { 
-      slug: product.slug.current
+      slug: bestSeller.slug.current
     }
   }));
 
@@ -110,17 +110,17 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug }}) => {
-  const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-  const productsQuery = '*[_type == "product"]'
+  const query = `*[_type == "bestSeller" && slug.current == '${slug}'][0]`;
+  const bestSellersQuery = '*[_type == "bestSeller"]'
   
-  const product = await client.fetch(query);
-  const products = await client.fetch(productsQuery);
+  const bestSeller = await client.fetch(query);
+  const bestSellers = await client.fetch(bestSellersQuery);
 
-  console.log(product);
+  console.log(bestSeller);
 
   return {
-    props: { products, product }
+    props: { bestSellers, bestSeller }
   }
 }
 
-export default ProductDetails
+export default BestSellerDetails

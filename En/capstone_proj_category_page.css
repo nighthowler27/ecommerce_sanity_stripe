@@ -1,0 +1,122 @@
+body {
+    background: #232323;
+    /* overflow: hidden; */
+}
+
+.ctg-container {
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    width: auto;
+    margin: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 65px;
+}
+
+.ctg-container nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 500px;
+    padding-top: 35px;
+}
+
+.ctg-container nav label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: #232323;
+    font-size: 21px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.ctg-container nav label i {
+    padding: 0 5px;
+}
+
+.ctg-container nav .slider {
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    background: #232323;
+    border-radius: 5px;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+#link-1:checked ~ nav .slider {
+    top: 35px;
+}
+
+#link-2:checked ~ nav .slider {
+    top: 99.5px;
+}
+
+#link-3:checked ~ nav .slider{
+    top: 163.5px;
+}
+
+#link-4:checked ~ nav .slider{
+    top: 227.6px;
+}
+
+#link-5:checked ~ nav .slider{
+    top: 292px;
+}
+
+#link-6:checked ~ nav .slider{
+    top: 356px;
+}
+
+#link-7:checked ~ nav .slider{
+    top: 420.4px;
+}
+
+#link-8:checked ~ nav .slider{
+    top: 485px;
+}
+
+#link-1:checked ~ nav label.link-1,
+#link-2:checked ~ nav label.link-2,
+#link-3:checked ~ nav label.link-3,
+#link-4:checked ~ nav label.link-4,
+#link-5:checked ~ nav label.link-5,
+#link-6:checked ~ nav label.link-6,
+#link-7:checked ~ nav label.link-7,
+#link-8:checked ~ nav label.link-8 {
+    color: #fff;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.ctg-container .content {
+    display: none;
+}
+
+.ctn-container {
+    padding: 30px;
+}
+
+#link-1:checked ~ .ctn-container .content-1,
+#link-2:checked ~ .ctn-container .content-2,
+#link-3:checked ~ .ctn-container .content-3,
+#link-4:checked ~ .ctn-container .content-4,
+#link-5:checked ~ .ctn-container .content-5,
+#link-6:checked ~ .ctn-container .content-6,
+#link-7:checked ~ .ctn-container .content-7,
+#link-8:checked ~ .ctn-container .content-8 {
+    display: block;
+}
